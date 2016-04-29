@@ -22,4 +22,17 @@ public class FactorHelper {
         }
         return sum;
     }
+
+    public static boolean isPrime(long num){
+        long numFactorsSoFar = 0;
+        for(long i = 1; i < num; i++) {
+            if (num % i == 0) {
+                numFactorsSoFar++;
+            }
+            if(numFactorsSoFar > 2){
+                return false;
+            }
+        }
+        return true;
+    }
 }
